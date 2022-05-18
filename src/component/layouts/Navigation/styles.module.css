@@ -1,0 +1,36 @@
+.nav_bar {
+    padding: 0 20rem;
+    border-top: .1rem solid #ccc;
+    border-bottom: .1rem solid #ccc;
+    margin-top: 5.2rem;
+}
+
+.nav_bar ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.nav_bar ul li a{
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav_bar ul li a:hover {
+    text-decoration: overline;
+    opacity: 0.7;
+}
+
+@media (max-width : 820px) {
+    .nav_bar {
+        display: none;
+    }
+}
+
+@media (min-width : 821px) {
+    .nav_bar {
+        padding: 0 10rem;
+    }
+}

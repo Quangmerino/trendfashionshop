@@ -1,0 +1,64 @@
+.contact__title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+.contact__des {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #999;
+    padding: 2rem;
+    margin: 5rem 27rem;
+    border-bottom: .1rem solid #999;
+}
+
+.contact__form {
+    display: block;
+    margin:4rem 0 4rem 10rem;
+}
+
+.contact__form label {
+    display: block;
+    font-size: 1.6rem;
+}
+
+.form__title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 2rem 0;
+    color: #999;
+}
+
+.form__des {
+    font-size: 1.6rem;
+    margin: 2rem 0;
+}
+
+.contact__form input,
+.contact__form textarea {
+    display: block;
+    width: 50%;
+    line-height: 2.2rem;
+    margin: 1.5rem 0;
+    padding: .5rem 1rem;
+    outline: none;
+    font-size: 1.6rem;
+}
+.contact__form textarea {
+    height: 30rem;
+}
+.contact__form__submit {
+    margin-top: 2rem;
+    padding: 1.5rem 6rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.contact__form__submit:hover {
+    background-color: #1a1f4b;
+    color: #fff;
+}

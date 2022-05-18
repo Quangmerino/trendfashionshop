@@ -1,0 +1,65 @@
+@keyframes  hoverLink{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(65, 64, 64);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 5rem;
+    z-index: 1000;
+}
+
+.logo {
+    height: 5rem;
+    width: auto;
+    margin-left: 5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+}
+
+.menu li a:hover {
+    opacity: 0.8;
+    animation: hoverLink ease-in 1s;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 0 6rem;
+}
+
+.login:hover {
+    animation: hoverLink ease-in 1s;
+}
+
+@media (max-width:76.7rem) {
+    .menu {
+        display: none;
+    }
+}

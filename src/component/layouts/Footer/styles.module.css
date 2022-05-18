@@ -1,0 +1,120 @@
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 15rem;
+    font-size: 1.4rem;
+    background-color: rgb(65, 64, 64);
+    color: #fff;
+}
+
+.footer__top span {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.footer__top h2 {
+    font-size: 2rem;
+}
+
+.footer__top a {
+    display: inline-block;
+    color: #fff;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+}
+
+.footer__top a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.search {
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.search__input {
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+}
+.btn__search {
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-transform: uppercase ;
+}
+.btn__search:hover {
+    background-color: #666;
+    color: #fff;
+    outline: auto;
+}
+
+.footer__bottom {
+    background-color: #000;
+    font-size: 1.6rem;
+    color: #333;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 47.5rem) {
+    .footer__top {
+        padding: 2rem;
+    }
+    .footer__top span {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+    .footer__top span {
+        font-size: 2rem;
+    }
+    .search {
+        display: inline-block;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    .btn__search {
+        margin: 2rem 0;
+    }
+    .footer__bottom {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 54rem) {
+    .footer__top {
+        padding-left: 0;
+    }
+    .footer__top li a{
+        font-size: 2.2rem;
+    }
+}
+
+@media only screen and (max-width: 76.8rem) {
+    .footer__top {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer__top ul {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (min-width: 96.8rem) {
+    .footer__top {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer__top ul {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
