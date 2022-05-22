@@ -25,7 +25,7 @@ export default function Navigation() {
           <Link to="/about">About us</Link>
         </li>
         <li>
-          <Link to="/Contact">Contact Us</Link>
+          <Link to="/contact">Contact Us</Link>
         </li>
       </ul>
     </nav>

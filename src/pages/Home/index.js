@@ -23,13 +23,15 @@ import Product from "~/component/products/arrivals";
 import Button from "~/component/button/button";
 import ProductShop from "~/component/products/shop";
 import ProductWhyChoose from "~/component/products/whyshoose";
+import Slider from "~/component/Slider";
 
 export default function HomePage() {
   return (
     <div className={styles.main__content}>
-      <div className={styles.slider}>
+      {/* <div className={styles.slider}>
         <img src={slideImg} alt="slider" />
-      </div>
+      </div> */}
+      <Slider img={slideImg}/>
       <article className={styles.why__choose}>
         <h1 className={styles.why__choose__title}>WHY CHOOSE US?</h1>
         <p className={styles.why__choose__des}>
