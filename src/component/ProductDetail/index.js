@@ -1,16 +1,14 @@
-import styles from "./styles.module.css"
-import imageDetail from "~/assets/images/arrivals1.jpg"
-import { useState } from "react"
-import Button from "../button/button";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { default as image1, default as imageDetail } from "~/assets/images/arrivals1.jpg";
+import image2 from "~/assets/images/arrivals4.jpg";
+import Button from "../button/button";
 import Product from "../products/arrivals";
-import image1 from "~/assets/images/arrivals1.jpg"
-import image2 from "~/assets/images/arrivals4.jpg"
-import { CartContext } from "~/App";
-// import SlideProduct from "../SlideProduct"
+import { CartContext } from "../useContext/CartContext/CartProvider";
+import styles from "./styles.module.css";
 
 export default function ProductDetail () {
-    const context = useState(CartContext);
+    const {cart, changeQuantity} = useContext(CartContext);
     return (
         <>
             <div className={styles.productDetail}>
@@ -40,9 +38,9 @@ export default function ProductDetail () {
                 </div>
                 <div className={styles.product__size}></div>
                 <div className={styles.product__quantity}>
-                    <button onClick={() => context.setCart(context.cart-1)}>-</button>
-                    <span>{context.cart >= 0 ? context.cart : 0}</span>
-                    <button onClick={() => context.setCart(context.cart + 1)}>+</button>
+                    <button onClick={() => changeQuantity('unMore')}>-</button>
+                    <span>{cart > 1 ? cart : 1}</span>
+                    <button onClick={() =>  changeQuantity('more')}>+</button>
                 </div>
                 <div className={styles.btn__cart}>
                     <Button className={styles.btn} name="ADD TO CART"/>

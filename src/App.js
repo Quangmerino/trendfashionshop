@@ -15,15 +15,13 @@ import AboutPage from "~/pages/About";
 import ContactPage from "~/pages/Contact";
 import DownloadPage from "~/pages/Download";
 import ProductDetail from "./component/ProductDetail";
-
-export const CartContext = React.createContext();
+import { CartProvider } from './component/useContext/CartContext/CartProvider';
 
 function App() {
-  const [cart, setCart] = useState({})
   return (
 
     <div className="App">
-      <CartContext.Provider value={[cart, setCart]}>
+      <CartProvider>
         <Header />
         <Navigation />
         <Routes>
@@ -38,7 +36,7 @@ function App() {
           <Route path="/product-detail" element={<ProductDetail/>} />
         </Routes>
         <Footer />
-      </CartContext.Provider>
+      </CartProvider>
     </div>
   );
 }

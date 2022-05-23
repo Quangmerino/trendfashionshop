@@ -5,10 +5,10 @@ import LocalMallIcon from '@mui/icons-material/LocalMall';
 import logoSite from "../../../assets/images/trendy.png";
 import img from "~/assets/images/arrivals1.jpg"
 import { useContext } from "react";
-import { CartContext } from "~/App";
+import { CartContext } from "~/component/useContext/CartContext/CartProvider";
 
 export default function Header() {
-  const context = useContext(CartContext)
+  const {cart} = useContext(CartContext);
   return (
     <header className={styles.header}>
       <Link to="/">
@@ -18,6 +18,7 @@ export default function Header() {
           <Link to="/product-detail">
             <LocalMallIcon/>
             <span>Shopping Cart</span>
+            <span className={styles.label__quantity}>{cart > 1 ? cart : 1}</span>
           </Link>
           <div className={styles.view__box}>
             <div className={styles.view__item}>
@@ -26,14 +27,14 @@ export default function Header() {
                   <span className={styles.item__name}>V Neck With Button Tap Body Romper</span>
                   <span className={styles.item__size}>Size M</span>
                   <div className={styles.total}>
-                    <span className={styles.quantity}>{context.setCart}</span>
+                    <span className={styles.quantity}>{cart > 1 ? cart : 1}</span>
                     X
                     <span className={styles.price}>$225</span>
                   </div>
               </div>
             </div>
             <div className={styles.check}>
-              <span className={styles.check__price}>Total : $225</span>
+              <span className={styles.check__price}>Total : ${(cart > 1 ? cart : 1) * 255}</span>
               <button className={styles.btn__checkout}>Check Out</button>
               <button className={styles.btn__view}>View Cart</button>
             </div>
